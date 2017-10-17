@@ -4,7 +4,7 @@ maintainer_email 'you@example.com'
 license 'all_rights'
 description 'Installs/Configures gauth'
 long_description 'Installs/Configures gauth'
-version '0.1.0'
+version '0.1.1'
 issues_url 'https://github.com/GoogleCloudPlatform/chef-google-auth/issues' \
   if respond_to?(:issues_url)
 source_url 'https://github.com/GoogleCloudPlatform/chef-google-auth' \
