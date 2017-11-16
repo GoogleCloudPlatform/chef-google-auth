@@ -38,6 +38,10 @@ module Google
         new_resource.__auth ::Google::Authorization.new.from_user_credential!
       end
 
+      action :applicationdefaultcredentials do
+        new_resource.__auth ::Google::Authorization.new.from_application_default_credentials!
+      end
+
       action :nothing do
         raise 'An action for a provider is required: service_account'
       end

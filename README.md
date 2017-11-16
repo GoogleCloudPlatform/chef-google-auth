@@ -80,6 +80,10 @@ The file you download is the one provided in the `path` property.
   If you have [`gcloud`][gcloud] setup you can piggyback on the account
   currently set as active for the user running Chef.
 
+- `applicationdefaultcredentials`
+  Same as above. See `gcloud auth application-default login --help` for more
+  information
+
 	_Warning! Please be aware that the account is subject to whichever account is
 	set as active on `gcloud` tool, so the results will not be always consistent
 	if they change under Chef by the user._
