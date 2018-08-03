@@ -25,6 +25,5 @@
 #
 # ----------------------------------------------------------------------------
 
-source 'https://supermarket.chef.io'
-
-metadata
+# Add libraries/ to library search path
+$LOAD_PATH.unshift ::File.expand_path(::File.dirname(__FILE__))
