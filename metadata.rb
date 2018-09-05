@@ -27,8 +27,9 @@
 
 name 'google-gauth'
 maintainer 'Google'
-maintainer_email 'nelsona@google.com'
-license 'apachev2'
+maintainer_email 'chef-on-gcp@google.com'
+license 'Apache-2.0'
+chef_version '>= 12.5' if respond_to?(:chef_version)
 description 'Installs/Configures gauth'
 long_description '
     Installs/Configures gauth'
