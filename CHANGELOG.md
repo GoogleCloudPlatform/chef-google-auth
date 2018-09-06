@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 (2018-09-05)
+
+### New features
+
+- Fix gauth_credential_serviceaccount_for_function error
+
 ## 0.2.0 (2018-09-04)
 
 ### New features
