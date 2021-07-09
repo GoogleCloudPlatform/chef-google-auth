@@ -105,7 +105,11 @@ module Google
     end
 
     def from_application_default_credentials!
-      raise NotImplementedError, ':application_default_credentials'
+      Google::Ruby.ensure_two!
+      hash = make_secrets_hash(application_default_credentials)
+      @authorization = Google::APIClient::ClientSecrets.new(hash)
+                                                       .to_authorization
+      self
     end
 
     private
@@ -124,6 +128,12 @@ module Google
       req['Authorization'] = auth[:authorization]
       req.token = auth[:authorization].split(' ')[1]
       req
+    end
+
+    def application_default_credentials
+      JSON.parse(
+        File.read(File.join(ENV['HOME'], '.config', 'gcloud', 'application_default_credentials.json'))
+      )
     end
 
     def credentials

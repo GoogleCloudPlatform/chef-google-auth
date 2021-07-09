@@ -49,7 +49,11 @@ module Google
       end
 
       action :defaultuseraccount do
-        __auth ::Google::Authorization.new.from_user_credential!
+        new_resource.__auth ::Google::Authorization.new.from_user_credential!
+      end
+
+      action :applicationdefaultcredentials do
+        new_resource.__auth ::Google::Authorization.new.from_application_default_credentials!
       end
 
       action :nothing do
